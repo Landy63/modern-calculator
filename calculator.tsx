@@ -1,8 +1,8 @@
 'use client'
 
 import { useState, useCallback } from 'react'
-import { Display } from './display'
-import { Keypad } from './keypad'
+import { Display } from './components/display'
+import { Keypad } from './components/keypad'
 
 export default function Calculator() {
   const [display, setDisplay] = useState('0')
