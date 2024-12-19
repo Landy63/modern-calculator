@@ -1,6 +1,5 @@
 import './globals.css'
 import { Poppins } from 'next/font/google'
-import ClientLayout from './ClientLayout'
 
 const poppins = Poppins({ 
   weight: ['400', '600', '700'],
@@ -25,18 +24,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en" className={`h-full ${poppins.className}`}>
-      <head>
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      </head>
       <body className="fixed inset-0 overflow-hidden bg-gradient-to-b from-purple-500 to-pink-500">
-        <ClientLayout>
-          <div className="relative h-full w-full p-4 pt-safe flex flex-col items-center justify-center">
-            {children}
-          </div>
-        </ClientLayout>
+        <div className="relative h-full w-full p-4 pt-safe flex flex-col items-center justify-center">
+          {children}
+        </div>
       </body>
     </html>
   )
